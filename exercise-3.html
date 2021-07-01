@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <title>Exercise 2</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+    <script style="height: 100px;"  >
     /* When the button is clicked, add a blue div that is 100px by 100px to the page */
     $(document).ready(function () {
       // Put your code here
+      const $button = $("#the-button")
+      $button.on('click', (event) => {        
+      const $newDiv = $("<div style='height: 100px; background: blue; width: 100px;'>")
+      $newDiv.appendTo(document.body)
+      
+      })
     });
     </script>
   </head>

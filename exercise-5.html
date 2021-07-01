@@ -14,14 +14,35 @@
     */
     $(function() {
       // Write code here
+      const $frame = $('#iframe')
+      const $first = $('#first')
+      $first.on('click', (event) => {
+        event.preventDefault()        
+        $frame.attr("src", $first[0].href)
+        $frame.attr("style", "display: block")
+      })
+      const $second = $('#second')
+      $second.on('click', (event) => {
+        event.preventDefault()        
+        console.log($second[0].href)
+        $frame.attr("src", $second[0].href)
+        $frame.attr("style", "display: block")
+      })
+      const $third = $('#third')
+      $third.on('click', (event) => {
+        event.preventDefault()        
+        console.log($third[0].href)
+        $frame.attr("src", $third[0].href)
+        $frame.attr("style", "display: block")
+      })
     });
     </script>
   </head>
   <body>
     <ul>
-      <li><a href="https://codepen.io/jkantner/embed/VwbLajq">Bouncy</a></li>
-      <li><a href="https://codepen.io/goodkatz/embed/LYPGxQz">Waves</a></li>
-      <li><a href="https://codepen.io/toshiya-marukubo/embed/vYmEpyj">Cubes</a></li>
+      <li  ><a id="first" href="https://codepen.io/jkantner/embed/VwbLajq">Bouncy</a></li>
+      <li ><a  id="second"  href="https://codepen.io/goodkatz/embed/LYPGxQz">Waves</a></li>
+      <li  ><a id="third" href="https://codepen.io/toshiya-marukubo/embed/vYmEpyj">Cubes</a></li>
     </ul>
     <iframe id="iframe" src="" width="800" height="480" style="display: none"></iframe>
   </body>

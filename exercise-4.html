@@ -12,6 +12,19 @@
     */
     $(function () {
       // write your code here
+      const $clear = $('#clear-button')
+      $clear.on('click', (event) => {
+        const $textField = $("#text-field")        
+        $textField.val("")
+      })
+      const $save = $('#save-button')
+      $save.on('click', (event) => {
+        const $ul = $('#log')
+        const $textField = $("#text-field")
+        const $newLi = $(`<li>${$textField.val()}</li>`).appendTo($ul)       
+        
+      })
+
     });
     </script>
   </head>
